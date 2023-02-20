@@ -1,0 +1,13 @@
+[
+  VAR x int;
+  VAR y int;
+  SET x 0;
+  PROC p [x:int, var y:int]
+    [
+      SET y (add x y);
+    ];
+  SET x 34;
+  SET y 8;
+  CALL p x (adr y); 
+  ECHO y
+]
